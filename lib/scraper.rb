@@ -4,7 +4,7 @@ require 'pry'
 class Scraper
 
  def self.scrape_index_page(index_url)
-    page = Nokogiri::HTML(open(index_url))
+    page = Nokogiri::HTML(open(index_url))   # scrapes the student index page 
     students = []
 
     page.css("div.student-card").each do |student|
@@ -16,7 +16,7 @@ class Scraper
                 :profile_url => profile_url}
       students << student_info
       end
-    students
+    students   # returns 
    end
 
   def self.scrape_profile_page(profile_url)
