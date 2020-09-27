@@ -6,6 +6,7 @@ class Student
 
  def initialize(student_hash)
     student_hash.each {|k, v| self.send(("#{k}="), v)}
+    # takens in an argument of a hash, sets that new student's attributes using key/value pairs of that hash 
     @@all << self
  end
 
