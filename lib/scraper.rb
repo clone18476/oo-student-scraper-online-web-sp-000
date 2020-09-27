@@ -19,6 +19,7 @@ class Scraper
                 :profile_url => profile_url}
       students << student_info
       end
+    end 
   end
 
   def self.scrape_profile_page(profile_url)
