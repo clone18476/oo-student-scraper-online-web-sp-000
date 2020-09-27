@@ -8,7 +8,6 @@ class Scraper
     students = []
 
     page.css("div.student-card").each do |student|
-      binding.pry
       name = student.css(".student-name").text
       location = student.css(".student-location").text
       profile_url = student.css("a").attribute("href").value
