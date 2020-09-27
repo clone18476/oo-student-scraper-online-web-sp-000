@@ -4,9 +4,6 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url)
-    # - should use Nokogiri and open-uri to access the index_url
-    # - reutrn value should be an array of hashes in which each hash represents a single student
-    # - The keys of the individual student hashes should be :name, :location and :profile_url.
     page = Nokogiri::HTML(open(index_url))
     students = []
 
