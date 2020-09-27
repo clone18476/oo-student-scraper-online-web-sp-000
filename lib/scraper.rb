@@ -8,9 +8,9 @@ class Scraper
     students = []          #empty array for students 
 
     page.css("div.student-card").each do |student| # when inspecting the website, notice that each student has their own student card 
-      name = student.css(".student-name").text
-      location = student.css(".student-location").text
-      profile_url = student.css("a").attribute("href").value
+      name = student.css(".student-name").text  #sets the variable name to the inspected name 
+      location = student.css(".student-location").text  #sets location to the inspected location
+      profile_url = student.css("a").attribute("href").value   
       student_info = {:name => name,
                 :location => location,
                 :profile_url => profile_url}
